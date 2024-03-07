@@ -108,9 +108,11 @@ figure {
 }
 
 .parametres {
+    background: var(--color-primary);
     display: flex;
     justify-content: center;
     text-align: center;
+    padding-top: 20px;
 }
 
 .col {
@@ -122,7 +124,7 @@ figure {
 
 .formulaire {
     background: var(--color-primary);
-    padding: 30px;
+    padding: 10px;
     height: 700px;
     line-height: 2;
 }
