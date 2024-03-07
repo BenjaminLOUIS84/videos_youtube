@@ -1,3 +1,5 @@
+/*///////////////////////////////////////CONFIGURATION/////////////////////////////////////////*/
+
 /*  Pour reset les marges*/
 * {
     margin: 0;
@@ -21,6 +23,8 @@ html {
     --police-secondary: cursive;
 
 }
+
+/*///////////////////////////////////////Accueil/////////////////////////////////////////*/
 
 body {
     font-family: var(--police-primary);
@@ -98,6 +102,19 @@ figure {
     align-items: center;
 }
 
+/*///////////////////////////////////////Formulaire/////////////////////////////////////////*/
+
+.formulaire {
+    background: var(--color-primary);
+    padding: 30px;
+    height: 700px;
+    line-height: 2;
+}
+
+#youtube_Envoyer {
+    margin-top: 40px;
+}
+
 /*///////////////////////////////////////RESPONSIVE/////////////////////////////////////////*/
 
 /*////////////////INSPECTER - BUREAU - PAGE WEB///////////////////*/
@@ -113,8 +130,6 @@ figure {
     }
 
     .logoYoutube {
-        /* width: 20%;
-        margin-left: 20px; */
         display: none;
     }
 
