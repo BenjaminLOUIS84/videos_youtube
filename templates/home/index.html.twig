@@ -12,7 +12,7 @@
         <figure>
             <figcaption>
                 <a href="https://youtube.com/@benetvalsurlesroutes?si=tloF4kPLmjdTxkfc"><h1>Ben et Val sur les routes</h1></a>
-                <p>@benetvalsurlesroutes</p><br>
+                <p>@benetvalsurlesroutes</p>
                 <p>132 abonnés</p>
             </figcaption>
             <img class="benEtVal" src="{{ asset('img/benEtVal.jpg') }}" alt="Benjamin et Valérie">
@@ -20,9 +20,18 @@
 
         <section>
             <h2>Visualiser les Vlogs</h2>
-            {% for youtube in youtubes %}
-                <p>{{ youtube.url }} - {{ youtube.name }}</p>
-            {% endfor %}
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                {% for youtube in youtubes %}
+                    <div class="col">
+                        <div class="card shadow p-3 mb-5 bg-white rounded">
+                            <img src="{{ youtube.url | youtube_thumbnail }}" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ youtube.name }}</h5>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
         </section>
 
 
