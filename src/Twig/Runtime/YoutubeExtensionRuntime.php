@@ -3,16 +3,20 @@
 namespace App\Twig\Runtime;
 
 use Twig\Extension\RuntimeExtensionInterface;
+use RicardoFiorani\Matcher\VideoServiceMatcher;
 
 class YoutubeExtensionRuntime implements RuntimeExtensionInterface
 {
+    private $youtubeParser;
+
     public function __construct()
     {
-        // Inject dependencies if needed
+        $this->youtubeParser = new VideoServiceMatcher();
     }
 
-    public function doSomething($value)
+    public function youtubeThumbnail($value)
     {
-        // ...
+        $video = $this->youtubeParser->parse($value);
+        return $video->getLargestThumbnail();
     }
 }

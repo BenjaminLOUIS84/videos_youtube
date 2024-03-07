@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Lecteur Vidéo{% endblock %}
+
+{% block body %}
+    <div class="formulaire">
+        <h2>{{ name }}</h2>
+        <div>{{ url|youtube_player|raw }}</div>
+    </div>
+{% endblock %}

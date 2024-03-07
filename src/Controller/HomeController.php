@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Youtube;
 use App\Repository\YoutubeRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
@@ -15,6 +16,15 @@ class HomeController extends AbstractController
         return $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController',
             'youtubes' => $youtubeRepository->findAll(),
+        ]);
+    }
+
+    #[Route('/{id}', name: 'app_video')]
+    public function video(Youtube $youtube): Response
+    {
+        return $this->render('youtube/video.html.twig', [
+            'name' => $youtube->getName(),
+            'url' => $youtube->getUrl(),
         ]);
     }
 }
