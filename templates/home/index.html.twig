@@ -26,7 +26,6 @@
                         <div class="card shadow p-3 mb-5 bg-white rounded">
                             <a href="{{ path('app_video', {'id': youtube.id }) }}">
                                 <img src="{{ asset('uploads/images/'~ youtube.image) }}" class="card-img-top" alt="image miniature de la vidéo">
-                                {# <img src="{{ youtube.url|youtube_thumbnail }}" class="card-img-top" alt="image miniature de la vidéo"> #}
                             </a>
                             <div class="card-body">
                                 <h5 class="card-title">{{ youtube.name }}</h5>

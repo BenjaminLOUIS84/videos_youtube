@@ -102,6 +102,10 @@ figure {
     align-items: center;
 }
 
+.col {
+    width: 40%;
+}
+
 /*///////////////////////////////////////Formulaire/////////////////////////////////////////*/
 
 .formulaire {
@@ -179,29 +183,29 @@ figure {
     }
 
     .route {
-        width: 75%;
+        width: 100%;
         height: 130px;
     }
 
     figure {
         padding-top: 30px;
+        justify-content: center;
     }
 
     .benEtVal {
-        width: 20%;
+        width: 30%;
         border-radius: 110px;
         padding: 10px;
-        margin-left: 20px;
+        margin-left: 0px;
     }
 
     h1 {
-        font-size: 1.2em;
+        font-size: 1.4em;
     }
 
     h2 {
         font-size: 1.5em;
         padding: 40px;
-        margin-right: 60px;
     }
 
     p {
@@ -209,9 +213,11 @@ figure {
     }
 
     .col {
-        width: 84%;
+        width: 100%;
+    }
+
+    .custom-file-input {
+        font-size: 0.8em;
     }
 
 }
-
-
