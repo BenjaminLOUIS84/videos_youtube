@@ -12,7 +12,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class YoutubeController extends AbstractController
 {
-    #[Route('/youtube', name: 'app_youtube')]
+    #[Route('/ADM', name: 'app_youtube')]
     // #[Route('/', name: 'app_home')]
     public function index(Request $request, EntityManagerInterface $em): Response
     {
