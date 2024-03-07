@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+    <div id="wrapper">
+        <section class="accueil">
+            <img class="logoYoutube" src="{{ asset('img/youtube.png') }}" alt="Logo Youtube">
+            
+            <img class="route" src="{{ asset('img/route1.jpg') }}" alt="Photo d'une route">
+              
+        </section>
+
+        <figure>
+            <figcaption>
+                <a href="https://www.youtube.com/channel/UCSnkZWjgUonOfe3EEd4d42g"><h1>Ben et Val sur les routes</h1></a>
+            </figcaption>
+            <img class="benEtVal" src="{{ asset('img/benEtVal.jpg') }}" alt="Benjamin et Valérie">
+        </figure>
+
+        <section>
+            <h2>Visualiser les vidéos</h2>
+        </section>
+
+
+    </div>
+{% endblock %}

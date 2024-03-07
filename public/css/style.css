@@ -1,0 +1,146 @@
+/*  Pour reset les marges*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Pour rendre tous les liens scrollables*/
+html {
+    scroll-behavior: unset;
+}
+
+/* VARIABLES CSS pour changer les couleurs et la police de tout le site */
+:root {
+    /* COULEURS */
+    --color-primary: black;
+    --color-secondary: white;
+
+    /* POLICES */
+    --police-primary: Verdana, Geneva, Tahoma, sans-serif;
+    --police-secondary: cursive;
+
+}
+
+body {
+    font-family: var(--police-primary);
+    align-items: center;
+    color: var(--color-secondary);
+}
+
+#wrapper {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    background: var(--color-primary);
+}
+
+h1 {
+    padding: 20px;
+    font-size: 2em;
+    font-family: var(--police-secondary);
+    font-weight: lighter;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-secondary);
+}
+
+h2 {
+    padding: 20px;
+    text-align: center;
+    font-weight: lighter;
+    font-family: var(--police-secondary);
+}
+
+.logoYoutube {
+    width: 10%;
+}
+
+.route {
+    width: 90%;
+    object-fit: cover;
+    overflow: hidden;
+    height: 130px;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+figure {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: left;
+}
+
+.benEtVal {
+    width: 15%;
+    border-radius: 100px;
+    padding: 10px;
+    margin-left: 90px;
+}
+
+.accueil {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+
+/*///////////////////////////////////////RESPONSIVE/////////////////////////////////////////*/
+
+/*////////////////INSPECTER - BUREAU - PAGE WEB///////////////////*/
+@media only screen and (max-width: 1196px) {
+
+}
+
+/*TABLETTE//////////////////////////////////////////////////////*/
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    #wrapper {
+        width: 120%;
+        margin: auto;
+    }
+
+    .logoYoutube {
+        width: 20%;
+        margin-left: 20px;
+    }
+
+    .route {
+        width: 75%;
+        height: 260px;
+    }
+
+    figure {
+        justify-content: space-evenly;
+        padding-top: 30px;
+    }
+
+    .benEtVal {
+        width: 20%;
+        border-radius: 110px;
+        padding: 10px;
+        margin-left: 30px;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+}
+
+
+/*TELEPHONE//////////////////////////////////////////////////////*/
+
+@media (min-width: 0) and (max-width: 768px) {
+
+   
+}
