@@ -28,7 +28,7 @@
 
         <figure>
             <figcaption>
-                <a href="https://youtube.com/@benetvalsurlesroutes?si=tloF4kPLmjdTxkfc"><h1>Ben et Val sur les routes</h1></a>
+                <a href="https://youtube.com/@benetvalsurlesroutes?si=tloF4kPLmjdTxkfc" title="Accéder à la chaine Youtube"><h1>Ben et Val sur les routes</h1></a>
                 <p>@benetvalsurlesroutes</p>
                 <p>132 abonnés</p>
             </figcaption>
@@ -38,7 +38,7 @@
         {% if is_granted('ROLE_ADMIN') %}
             <div class="parametres">
                 <a href="{{ path('new_youtube') }}">
-                    <img src="{{ asset('img/gear-solid.svg') }}" class="Bouton" alt="Logo Engrenage" title="Espace Administrateur">
+                    <img src="{{ asset('img/gear-solid.svg') }}" class="Bouton" alt="Logo Engrenage" title="Gérer les Vlogs">
                 </a>
             </div>
         {% endif %}

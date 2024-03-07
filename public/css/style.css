@@ -128,7 +128,6 @@ figure {
     width: 40%;
     display: flex;
     align-items: center;
-    /* text-align: center; */
 }
 
 
@@ -142,6 +141,10 @@ figure {
 }
 
 #youtube_Envoyer {
+    margin-top: 40px;
+}
+
+button {
     margin-top: 40px;
 }
 
