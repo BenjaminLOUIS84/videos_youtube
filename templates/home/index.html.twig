@@ -24,7 +24,7 @@
                 {% for youtube in youtubes %}
                     <div class="col">
                         <div class="card shadow p-3 mb-5 bg-white rounded">
-                            <img src="{{ youtube.url | youtube_thumbnail }}" class="card-img-top">
+                            <img src="{{ youtube.url|youtube_thumbnail }}" class="card-img-top" alt=".">
                             <div class="card-body">
                                 <h5 class="card-title">{{ youtube.name }}</h5>
                             </div>

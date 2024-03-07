@@ -168,4 +168,50 @@ figure {
 
 /*TELEPHONE//////////////////////////////////////////////////////*/
 
-@media (min-width: 0) and (max-width: 768px) {}
+@media (min-width: 0) and (max-width: 768px) {
+    #wrapper {
+        width: 120%;
+        margin: auto;
+    }
+
+    .logoYoutube {
+        display: none;
+    }
+
+    .route {
+        width: 75%;
+        height: 130px;
+    }
+
+    figure {
+        padding-top: 30px;
+    }
+
+    .benEtVal {
+        width: 20%;
+        border-radius: 110px;
+        padding: 10px;
+        margin-left: 20px;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+        padding: 40px;
+        margin-right: 60px;
+    }
+
+    p {
+        font-size: 0.8em;
+    }
+
+    .col {
+        width: 84%;
+    }
+
+}
+
+
