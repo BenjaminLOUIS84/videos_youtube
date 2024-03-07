@@ -49,7 +49,7 @@ a {
 }
 
 h2 {
-    padding: 20px;
+    padding: 40px;
     text-align: center;
     font-weight: lighter;
     font-family: var(--police-secondary);
@@ -106,12 +106,13 @@ figure {
     }
 
     .logoYoutube {
-        width: 20%;
-        margin-left: 20px;
+        /* width: 20%;
+        margin-left: 20px; */
+        display: none;
     }
 
     .route {
-        width: 75%;
+        width: 100%;
         height: 260px;
     }
 
@@ -133,6 +134,10 @@ figure {
 
     h2 {
         font-size: 2em;
+    }
+
+    p {
+        font-size: 1.5em;
     }
 
 }
