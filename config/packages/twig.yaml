@@ -1,6 +1,9 @@
 twig:
     file_name_pattern: '*.twig'
 
+    # Instructions pour demander à twig d'utiliser un thème Bootstrap pour tous les formulaires automatiquement
+    form_themes: ['bootstrap_4_layout.html.twig'] 
+
 when@test:
     twig:
         strict_variables: true
