@@ -13,7 +13,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class YoutubeController extends AbstractController
 {
     #[Route('/ADM', name: 'app_youtube')]
-    // #[Route('/', name: 'app_home')]
     public function index(Request $request, EntityManagerInterface $em): Response
     {
         $youtube = new Youtube();                           // Créer un objet vide 
