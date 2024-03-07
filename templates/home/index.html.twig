@@ -21,7 +21,7 @@
         {# {% if is_granted('ROLE_ADMIN') %} #}
             <div class="parametres">
                 <a href="{{ path('new_youtube') }}">
-                    <img src="{{ asset('img/gear-solid.svg') }}" class="Bouton" alt="logo engrenage" title="Ajouter un Vlog">
+                    <img src="{{ asset('img/gear-solid.svg') }}" class="Bouton" alt="Logo Engrenage" title="Espace Administrateur">
                 </a>
             </div>
         {# {% endif %} #}
@@ -33,7 +33,7 @@
                     <div class="col">
                         <div class="card shadow p-3 mb-5 bg-white rounded">
                             <a href="{{ path('app_video', {'id': youtube.id }) }}">
-                                <img src="{{ asset('uploads/images/'~ youtube.image) }}" class="card-img-top" alt="image miniature de la vidéo">
+                                <img src="{{ asset('uploads/images/'~ youtube.image) }}" class="card-img-top" alt="Image miniature de la vidéo">
                             </a>
                             <div class="card-body">
                                 <h5 class="card-title">{{ youtube.name }}</h5>
