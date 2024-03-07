@@ -17,9 +17,9 @@ class YoutubeController extends AbstractController
     #[Route('/youtube/new', name: 'new_youtube')]
     public function new(Request $request, FileUploader $fileUploader, EntityManagerInterface $em): Response
     {
-        // if (!$this->isGranted('ROLE_ADMIN')) {                 // Permet d'empécher l'accès à cette action si ce n'est pas un admin
-        //     throw $this->createAccessDeniedException('Accès non autorisé');
-        // }
+        if (!$this->isGranted('ROLE_ADMIN')) {                 // Permet d'empécher l'accès à cette action si ce n'est pas un admin
+            throw $this->createAccessDeniedException('Accès non autorisé');
+        }
 
         $youtube = new Youtube();                           // Créer un objet vide 
         

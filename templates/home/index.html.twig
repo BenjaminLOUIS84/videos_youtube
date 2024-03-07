@@ -15,7 +15,6 @@
             {% else %}
     
               <div class="connexion">
-                <a href="{{ path ('app_register') }}">INSCRIPTION</a>
                 <a href="{{ path ('app_login') }}">CONNEXION</a>
               </div>
     
@@ -36,13 +35,13 @@
             <img class="benEtVal" src="{{ asset('img/benEtVal.jpg') }}" alt="Benjamin et Valérie">
         </figure>
 
-        {# {% if is_granted('ROLE_ADMIN') %} #}
+        {% if is_granted('ROLE_ADMIN') %}
             <div class="parametres">
                 <a href="{{ path('new_youtube') }}">
                     <img src="{{ asset('img/gear-solid.svg') }}" class="Bouton" alt="Logo Engrenage" title="Espace Administrateur">
                 </a>
             </div>
-        {# {% endif %} #}
+        {% endif %}
 
         <section>
             <h2>Visualiser les Vlogs</h2>
