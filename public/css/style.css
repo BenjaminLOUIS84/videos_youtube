@@ -141,7 +141,7 @@ figure {
 @media (min-width: 769px) and (max-width: 1024px) {
 
     #wrapper {
-        width: 120%;
+        width: 100%;
         margin: auto;
     }
 
@@ -186,7 +186,7 @@ figure {
 
 @media (min-width: 0) and (max-width: 768px) {
     #wrapper {
-        width: 120%;
+        width: 100%;
         margin: auto;
     }
 
@@ -212,7 +212,7 @@ figure {
     }
 
     h1 {
-        font-size: 1.4em;
+        font-size: 1.2em;
     }
 
     h2 {
