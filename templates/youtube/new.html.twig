@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Formulaire{% endblock %}
+
+{% block body %}
+    <div class="formulaire">
+        <h2>VLOG</h2>
+        {# {{ form(form) }} #}
+        {{ form_start(form) }}
+
+            {{ form_row(form.url) }}
+            {{ form_row(form.name) }}
+            <br>
+            {{ form_row(form.image) }}
+            <br>
+            {{ form_row(form.Envoyer) }}
+                       
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

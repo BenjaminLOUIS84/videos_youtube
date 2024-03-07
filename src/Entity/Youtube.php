@@ -3,7 +3,9 @@
 namespace App\Entity;
 
 use App\Repository\YoutubeRepository;
+use App\Entity\Youtube;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\File; // Pour permettre le chargement et l'affichage des images
 
 #[ORM\Entity(repositoryClass: YoutubeRepository::class)]
 class Youtube
@@ -18,6 +20,9 @@ class Youtube
 
     #[ORM\Column(length: 255)]
     private ?string $name = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $image = null;
 
     public function getId(): ?int
     {
@@ -44,6 +49,18 @@ class Youtube
     public function setName(string $name): static
     {
         $this->name = $name;
+
+        return $this;
+    }
+
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
+    public function setImage(string $image): static
+    {
+        $this->image = $image;
 
         return $this;
     }
