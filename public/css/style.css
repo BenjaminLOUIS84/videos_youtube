@@ -115,8 +115,20 @@ figure {
     padding-top: 20px;
 }
 
+.connexion {
+    font-family: var(--police-secondary);
+    background: var(--color-primary);
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding-top: 20px;
+}
+
 .col {
     width: 40%;
+    display: flex;
+    align-items: center;
+    /* text-align: center; */
 }
 
 

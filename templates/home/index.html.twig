@@ -4,6 +4,24 @@
 
 {% block body %}
     <div id="wrapper">
+
+        <nav>
+            {% if app.user %}
+    
+              <div class="connexion">
+                <a href="{{ path ('app_logout') }}">DECONNEXION</a>
+              </div>
+    
+            {% else %}
+    
+              <div class="connexion">
+                <a href="{{ path ('app_register') }}">INSCRIPTION</a>
+                <a href="{{ path ('app_login') }}">CONNEXION</a>
+              </div>
+    
+            {% endif %}
+          </nav>
+          
         <section class="accueil">
             <img class="logoYoutube" src="{{ asset('img/youtube.png') }}" alt="Logo Youtube">
             <img class="route" src="{{ asset('img/route1.jpg') }}" alt="Photo d'une route"> 
@@ -35,9 +53,9 @@
                             <a href="{{ path('app_video', {'id': youtube.id }) }}">
                                 <img src="{{ asset('uploads/images/'~ youtube.image) }}" class="card-img-top" alt="Image miniature de la vidéo">
                             </a>
-                            <div class="card-body">
+                            {# <div class="card-body">
                                 <h5 class="card-title">{{ youtube.name }}</h5>
-                            </div>
+                            </div> #}
                         </div>
                     </div>
                 {% endfor %}
