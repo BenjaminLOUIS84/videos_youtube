@@ -18,6 +18,14 @@
             <img class="benEtVal" src="{{ asset('img/benEtVal.jpg') }}" alt="Benjamin et Valérie">
         </figure>
 
+        {# {% if is_granted('ROLE_ADMIN') %} #}
+            <div class="parametres">
+                <a href="{{ path('new_youtube') }}">
+                    <img src="{{ asset('img/gear-solid.svg') }}" class="Bouton" alt="logo engrenage" title="Ajouter un Vlog">
+                </a>
+            </div>
+        {# {% endif %} #}
+
         <section>
             <h2>Visualiser les Vlogs</h2>
             <div class="row row-cols-1 row-cols-md-2 g-4">

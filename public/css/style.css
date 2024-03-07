@@ -102,9 +102,21 @@ figure {
     align-items: center;
 }
 
+.Bouton {
+    filter: invert(1);
+    width: 10%;
+}
+
+.parametres {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
 .col {
     width: 40%;
 }
+
 
 /*///////////////////////////////////////Formulaire/////////////////////////////////////////*/
 
