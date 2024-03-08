@@ -120,12 +120,17 @@ figure {
     width: 10%;
 }
 
+.connexion .Bouton {
+    width: 20%;
+}
+
 .parametres {
     background: var(--color-primary);
     display: flex;
     justify-content: center;
     text-align: center;
     padding-top: 20px;
+    padding-bottom: 40px;
 }
 
 .connexion {
@@ -134,7 +139,7 @@ figure {
     display: flex;
     justify-content: space-around;
     text-align: center;
-    padding-top: 20px;
+    /* padding-top: 20px; */
 }
 
 /*///////////////////////////////////////Images Caroussel/////////////////////////////////////////*/
@@ -271,7 +276,7 @@ button {
     }
 
     .connexion .Bouton {
-        width: 30%;
+        width: 40%;
     }
 
     .main .connexion {
@@ -288,6 +293,7 @@ button {
 
     .container {
         overflow: auto;
+        padding-bottom: 40px;
     }
 
 }
