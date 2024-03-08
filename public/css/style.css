@@ -138,7 +138,7 @@ figure {
 
 .container {
     position: relative;
-    overflow: auto;
+    overflow: hidden;
     display: flex;
     justify-content: left;
     scroll-snap-type: x mandatory;
