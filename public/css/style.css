@@ -133,7 +133,7 @@ figure {
 /*///////////////////////////////////////Images Caroussel/////////////////////////////////////////*/
 
 .col {
-    width: 50%;
+    width: 52%;
 }
 
 .container {
@@ -262,7 +262,6 @@ button {
     }
 
     p {
-        /* font-size: 0.8em; */
         display: none;
     }
 
@@ -275,11 +274,15 @@ button {
     }
 
     .col {
-        width: 100%;
+        width: 106%;
     }
 
     .custom-file-input {
         font-size: 0.8em;
+    }
+
+    .container {
+        overflow: auto;
     }
 
 }
