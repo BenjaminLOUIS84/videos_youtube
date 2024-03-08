@@ -130,12 +130,30 @@ figure {
     padding-top: 20px;
 }
 
+/*///////////////////////////////////////Images Caroussel/////////////////////////////////////////*/
+
 .col {
-    width: 40%;
-    display: flex;
-    align-items: center;
+    width: 50%;
 }
 
+.container {
+    position: relative;
+    overflow: auto;
+    display: flex;
+    justify-content: left;
+    scroll-snap-type: x mandatory;
+    flex-direction: row;
+    padding-bottom: 90px;
+}
+
+.container img {
+    position: sticky;
+    object-fit: cover;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    width: -webkit-fill-available;
+    padding: 10px;
+}
 
 /*///////////////////////////////////////Formulaire/////////////////////////////////////////*/
 

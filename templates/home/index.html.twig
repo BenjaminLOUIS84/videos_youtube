@@ -3,61 +3,75 @@
 {% block title %}Accueil{% endblock %}
 
 {% block body %}
-    <div id="wrapper">
-          
-        <section class="accueil">
-            <img class="logoYoutube" src="{{ asset('img/youtube.png') }}" alt="Logo Youtube">
-            <img class="route" src="{{ asset('img/route1.jpg') }}" alt="Photo d'une route"> 
-        </section>
+<div id="wrapper">
 
-        <div class="main">
-            <figure>
-                <figcaption>
-                    <a href="https://youtube.com/@benetvalsurlesroutes?si=tloF4kPLmjdTxkfc" title="Accéder à la chaine Youtube"><h1>Ben et Val sur les routes</h1></a>
-                    <p>@benetvalsurlesroutes - 133 abonnés</p>
-                </figcaption>
-                <img class="benEtVal" src="{{ asset('img/benEtVal.jpg') }}" alt="Benjamin et Valérie">
-            </figure>
-            <nav>
-                {% if app.user %}
-                <div class="connexion">
-                    <a href="{{ path ('app_logout') }}">
-                        <img class="Bouton" src="{{ asset('img/logout-box-line.svg') }}" title="Déconnexion" alt="Icône Log Out">
-                    </a>
-                </div>
-                {% else %}
-                <div class="connexion">
-                    <a href="{{ path ('app_login') }}">
-                        <img class="Bouton" src="{{ asset('img/login-box-line.svg') }}" title="Connexion" alt="Icône Log In">
-                    </a>
-                </div>
-                {% endif %}
-            </nav>
-        </div>
+    <section class="accueil">
+        <img class="logoYoutube" src="{{ asset('img/youtube.png') }}" alt="Logo Youtube">
+        <img class="route" src="{{ asset('img/route1.jpg') }}" alt="Photo d'une route">
+    </section>
 
-        {% if is_granted('ROLE_ADMIN') %}
-            <div class="parametres">
-                <a href="{{ path('new_youtube') }}">
-                    <img src="{{ asset('img/gear-solid.svg') }}" class="Bouton" alt="Logo Engrenage" title="Gérer les Vlogs">
+    <div class="main">
+        <figure>
+            <figcaption>
+                <a href="https://youtube.com/@benetvalsurlesroutes?si=tloF4kPLmjdTxkfc"
+                    title="Accéder à la chaine Youtube">
+                    <h1>Ben et Val sur les routes</h1>
+                </a>
+                <p>@benetvalsurlesroutes - 133 abonnés</p>
+            </figcaption>
+            <img class="benEtVal" src="{{ asset('img/benEtVal.jpg') }}" alt="Benjamin et Valérie">
+        </figure>
+        <nav>
+            {% if app.user %}
+            <div class="connexion">
+                <a href="{{ path ('app_logout') }}">
+                    <img class="Bouton" src="{{ asset('img/logout-box-line.svg') }}" title="Déconnexion"
+                        alt="Icône Log Out">
                 </a>
             </div>
+            {% else %}
+            <div class="connexion">
+                <a href="{{ path ('app_login') }}">
+                    <img class="Bouton" src="{{ asset('img/login-box-line.svg') }}" title="Connexion"
+                        alt="Icône Log In">
+                </a>
+            </div>
+            {% endif %}
+        </nav>
+    </div>
+
+    {% if is_granted('ROLE_ADMIN') %}
+    <div class="parametres">
+        <a href="{{ path('new_youtube') }}">
+            <img src="{{ asset('img/gear-solid.svg') }}" class="Bouton" alt="Logo Engrenage" title="Gérer les Vlogs">
+        </a>
+    </div>
+    {% endif %}
+
+    <section>
+        <h2>Visualiser les Vlogs</h2>
+
+        {% if youtubes|length != 0 %}
+
+            <div class="container">
+
+                {% for youtube in youtubes %}
+
+                    <div class="col">
+                        <a href="{{ path('app_video', {'id': youtube.id }) }}">
+                            <img src="{{ asset('uploads/images/'~ youtube.image) }}" class="card-img-top" alt="Image miniature de la vidéo">
+                        </a>
+                    </div>
+
+                {% endfor %}
+
+            </div>
+
+        {% else %}
+            Prochainement !
         {% endif %}
 
-        <section>
-            <h2>Visualiser les Vlogs</h2>
-            <div class="row row-cols-1 row-cols-md-2 g-4">
-                {% for youtube in youtubes %}
-                    <div class="col">
-                        <div class="card shadow p-3 mb-5 bg-white rounded">
-                            <a href="{{ path('app_video', {'id': youtube.id }) }}">
-                                <img src="{{ asset('uploads/images/'~ youtube.image) }}" class="card-img-top" alt="Image miniature de la vidéo">
-                            </a>
-                        </div>
-                    </div>
-                {% endfor %}
-            </div>
-        </section>
+    </section>
 
-
-    </div>
+</div>
 {% endblock %}
