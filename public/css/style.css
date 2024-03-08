@@ -102,6 +102,12 @@ figure {
     align-items: center;
 }
 
+.main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 .Bouton {
     filter: invert(1);
     width: 10%;
@@ -229,7 +235,7 @@ button {
     }
 
     h1 {
-        font-size: 1.2em;
+        font-size: 1.5em;
     }
 
     h2 {
@@ -238,7 +244,16 @@ button {
     }
 
     p {
-        font-size: 0.8em;
+        /* font-size: 0.8em; */
+        display: none;
+    }
+
+    .connexion .Bouton {
+        width: 30%;
+    }
+
+    .main .connexion {
+        padding-top: 0px;
     }
 
     .col {

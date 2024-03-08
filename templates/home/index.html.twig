@@ -4,40 +4,36 @@
 
 {% block body %}
     <div id="wrapper">
-
-        <nav>
-            {% if app.user %}
-    
-              <div class="connexion">
-                <a href="{{ path ('app_logout') }}">
-                    <img class="Bouton" src="{{ asset('img/logout-box-line.svg') }}" title="Déconnexion" alt="Icône Log Out">
-                </a>
-              </div>
-    
-            {% else %}
-    
-              <div class="connexion">
-                <a href="{{ path ('app_login') }}">
-                    <img class="Bouton" src="{{ asset('img/login-box-line.svg') }}" title="Connexion" alt="Icône Log In">
-                </a>
-              </div>
-    
-            {% endif %}
-          </nav>
           
         <section class="accueil">
             <img class="logoYoutube" src="{{ asset('img/youtube.png') }}" alt="Logo Youtube">
             <img class="route" src="{{ asset('img/route1.jpg') }}" alt="Photo d'une route"> 
         </section>
 
-        <figure>
-            <figcaption>
-                <a href="https://youtube.com/@benetvalsurlesroutes?si=tloF4kPLmjdTxkfc" title="Accéder à la chaine Youtube"><h1>Ben et Val sur les routes</h1></a>
-                <p>@benetvalsurlesroutes</p>
-                <p>132 abonnés</p>
-            </figcaption>
-            <img class="benEtVal" src="{{ asset('img/benEtVal.jpg') }}" alt="Benjamin et Valérie">
-        </figure>
+        <div class="main">
+            <figure>
+                <figcaption>
+                    <a href="https://youtube.com/@benetvalsurlesroutes?si=tloF4kPLmjdTxkfc" title="Accéder à la chaine Youtube"><h1>Ben et Val sur les routes</h1></a>
+                    <p>@benetvalsurlesroutes - 133 abonnés</p>
+                </figcaption>
+                <img class="benEtVal" src="{{ asset('img/benEtVal.jpg') }}" alt="Benjamin et Valérie">
+            </figure>
+            <nav>
+                {% if app.user %}
+                <div class="connexion">
+                    <a href="{{ path ('app_logout') }}">
+                        <img class="Bouton" src="{{ asset('img/logout-box-line.svg') }}" title="Déconnexion" alt="Icône Log Out">
+                    </a>
+                </div>
+                {% else %}
+                <div class="connexion">
+                    <a href="{{ path ('app_login') }}">
+                        <img class="Bouton" src="{{ asset('img/login-box-line.svg') }}" title="Connexion" alt="Icône Log In">
+                    </a>
+                </div>
+                {% endif %}
+            </nav>
+        </div>
 
         {% if is_granted('ROLE_ADMIN') %}
             <div class="parametres">
