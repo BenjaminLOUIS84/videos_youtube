@@ -9,13 +9,17 @@
             {% if app.user %}
     
               <div class="connexion">
-                <a href="{{ path ('app_logout') }}">DECONNEXION</a>
+                <a href="{{ path ('app_logout') }}">
+                    <img class="Bouton" src="{{ asset('img/logout-box-line.svg') }}" title="Déconnexion" alt="Icône Log Out">
+                </a>
               </div>
     
             {% else %}
     
               <div class="connexion">
-                <a href="{{ path ('app_login') }}">CONNEXION</a>
+                <a href="{{ path ('app_login') }}">
+                    <img class="Bouton" src="{{ asset('img/login-box-line.svg') }}" title="Connexion" alt="Icône Log In">
+                </a>
               </div>
     
             {% endif %}

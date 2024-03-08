@@ -24,7 +24,7 @@ class YoutubeType extends AbstractType
                 'required'=> false,                         // Rendre l'ajout d'image obligatoire
                 'constraints' => [                          // Sécurité pour que le fichier soit une image au format jpg uniquement
                     new File([
-                        'maxSize' => '1024k',
+                        'maxSize' => '3000k',
                         'mimeTypes' => [
                             'image/jpeg'
                         ],
