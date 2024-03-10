@@ -171,7 +171,7 @@ figure {
 .formulaire {
     background: var(--color-primary);
     padding: 10px;
-    height: 700px;
+    height: 760px;
     line-height: 2;
 }
 
@@ -305,6 +305,11 @@ button {
 
     .col {
         width: 106%;
+    }
+
+    .parametres {
+        padding-top: 40px;
+        padding-bottom: 10px;
     }
 
     .custom-file-input {
