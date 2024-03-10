@@ -58,7 +58,7 @@ a:hover {
 }
 
 p {
-    padding-top: 55px;
+    padding-top: 45px;
 }
 
 h2 {
@@ -186,7 +186,13 @@ button {
 /*///////////////////////////////////////RESPONSIVE/////////////////////////////////////////*/
 
 /*////////////////INSPECTER - BUREAU - PAGE WEB///////////////////*/
-@media only screen and (max-width: 1196px) {}
+@media only screen and (max-width: 1196px) {
+
+    .container {
+        overflow: auto;
+        padding-bottom: 60px;
+    }
+}
 
 /*TABLETTE//////////////////////////////////////////////////////*/
 
@@ -231,6 +237,11 @@ button {
         font-size: 1.5em;
     }
 
+    .container {
+        overflow: auto;
+        padding-bottom: 60px;
+    }
+
 }
 
 
@@ -259,10 +270,11 @@ button {
     }
 
     .benEtVal {
-        width: 30%;
+        /* width: 30%;
         border-radius: 110px;
         padding: 10px;
-        margin-left: 10px;
+        margin-left: 10px; */
+        display: none;
     }
 
     h1 {
@@ -275,7 +287,12 @@ button {
     }
 
     .connexion .Bouton {
-        width: 40%;
+        width: 20%;
+        padding-bottom: 30px;
+    }
+
+    .main {
+        flex-direction: column;
     }
 
     .main .connexion {
@@ -292,7 +309,7 @@ button {
 
     .container {
         overflow: auto;
-        padding-bottom: 40px;
+        padding-bottom: 80px;
     }
 
 }
