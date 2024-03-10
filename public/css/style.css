@@ -65,7 +65,7 @@ h2 {
     padding: 40px;
     text-align: center;
     font-weight: lighter;
-    font-family: var(--police-secondary);
+    font-family: var(--police-primary);
 }
 
 .logoYoutube {
@@ -278,12 +278,16 @@ button {
     }
 
     h1 {
-        font-size: 1.5em;
+        font-size: 2em;
     }
 
     h2 {
         font-size: 1.5em;
         padding: 40px;
+    }
+
+    p {
+        padding-top: 55px;
     }
 
     .connexion .Bouton {
