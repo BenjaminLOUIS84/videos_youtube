@@ -23,7 +23,12 @@
                         {% for youtube in youtubes %}
                             <tr>
                                 <td>{{ youtube.name }}</td>
-                                <td></td> 
+                                <td>
+                                    <a href="{{ path ('delete_youtube', {id: youtube.id}) }}" 
+                                        onclick="return confirm('Es-tu certain de vouloir supprimer ce vlog?')" 
+                                        class="btn btn-dark">Supprimer
+                                    </a>
+                                </td> 
                             </tr> 
                         {% endfor %}  
                     </tbody>

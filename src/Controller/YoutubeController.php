@@ -66,4 +66,27 @@ class YoutubeController extends AbstractController
             'youtubes' => $youtubeRepository->findAll(),
         ]);
     }
+
+    #[Route('/youtube/{id}/delete', name: 'delete_youtube')]              // Reprendre la route en ajoutant /{id}/delete' à l'URL et en changeant le nom du name
+    public function delete(Youtube $youtube, EntityManagerInterface $entityManager): Response   
+
+    {                                                                       // Créer une fonction delete() dans le controller pour supprimer un objet Youtube           
+        
+        if($this->isGranted('ROLE_ADMIN'))                        
+        {                                                                   // Si c'est l'Admin alors on éxecute les instructions
+
+            $entityManager->remove($youtube);                              // Supprime un objet Youtube
+            $entityManager->flush();                                        // Exécute l'action DANS LA BDD
+
+            $this->addFlash(                                                // Envoyer une notification
+                'success',
+                'Supprimé avec succès!'
+            );
+
+            return $this->redirectToRoute('app_home');                      // Rediriger vers la liste des objets Youtube
+            
+        }else{
+            throw $this->createAccessDeniedException('Accès non autorisé'); // Sinon on interdit l'accès
+        }
+    }
 }

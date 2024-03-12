@@ -10,6 +10,20 @@
         <img class="route" src="{{ asset('img/route1.jpg') }}" alt="Photo d'une route">
     </section>
 
+    {% for label, messages in app.flashes %}
+        {% for message in messages %}
+
+        <div class="alert alert-warning alert-dismissible" role="alert">
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            <div class="alert-message">
+                <strong>{{ message }}</strong>
+            </div>
+        </div>
+
+        {% endfor %}
+    {% endfor %}
+
+
     <div class="main">
         <figure>
             <figcaption>
@@ -17,8 +31,8 @@
                     title="Accéder à la chaine Youtube">
                     <h1>Ben et Val sur les routes</h1>
                 </a>
-                
-                
+
+
 
             </figcaption>
             <img class="benEtVal" src="{{ asset('img/benEtVal.jpg') }}" alt="Benjamin et Valérie">
@@ -45,10 +59,12 @@
     {% if is_granted('ROLE_ADMIN') %}
     <div class="parametres">
         <a href="{{ path('new_youtube') }}">
-            <img src="{{ asset('img/download-solid.svg') }}" class="Bouton" alt="Logo Télécharger" title="Ajouter des Vlogs">
+            <img src="{{ asset('img/download-solid.svg') }}" class="Bouton" alt="Logo Télécharger"
+                title="Ajouter des Vlogs">
         </a>
         <a href="{{ path('list_youtube') }}">
-            <img src="{{ asset('img/gear-solid.svg') }}" class="Bouton" alt="Logo Engrenage" title="Afficher la liste des Vlogs">
+            <img src="{{ asset('img/gear-solid.svg') }}" class="Bouton" alt="Logo Engrenage"
+                title="Afficher la liste des Vlogs">
         </a>
     </div>
     {% endif %}
@@ -57,30 +73,31 @@
 
         {% if youtubes|length != 0 %}
 
-            <div class="container">
+        <div class="container">
 
-                {% for youtube in youtubes %}
+            {% for youtube in youtubes %}
 
-                    <div class="col">
-                        <a href="{{ path('app_video', {'id': youtube.id }) }}">
-                            <img src="{{ asset('uploads/images/'~ youtube.image) }}" class="card-img-top" alt="Image miniature de la vidéo">
-                        </a>
-                    </div>
-
-                {% endfor %}
-
+            <div class="col">
+                <a href="{{ path('app_video', {'id': youtube.id }) }}">
+                    <img src="{{ asset('uploads/images/'~ youtube.image) }}" class="card-img-top"
+                        alt="Image miniature de la vidéo">
+                </a>
             </div>
 
+            {% endfor %}
+
+        </div>
+
         {% else %}
-            Prochainement !
+        Prochainement !
         {% endif %}
 
     </section>
 
     <div class="compteur">
-        <iframe height="80px" width="195px" frameborder="0" 
-        src=https://livecounts.io/embed/youtube-live-subscriber-counter/UCSnkZWjgUonOfe3EEd4d42g 
-        style="border: 0; width:195px; height:80px;">
+        <iframe height="80px" width="195px" frameborder="0"
+            src=https://livecounts.io/embed/youtube-live-subscriber-counter/UCSnkZWjgUonOfe3EEd4d42g
+            style="border: 0; width:195px; height:80px;">
         </iframe>
         <p>Abonnés</p>
     </div>
