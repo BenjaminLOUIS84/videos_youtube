@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste{% endblock %}
+
+{% block body %}
+<div id="wrapper">
+
+    <section>
+
+        {% if youtubes|length != 0 %}
+
+            <div class="formulaire">
+                <h2>Liste des Vlogs</h2>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Noms</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {% for youtube in youtubes %}
+                            <tr>
+                                <td>{{ youtube.name }}</td>
+                                <td></td> 
+                            </tr> 
+                        {% endfor %}  
+                    </tbody>
+                </table>
+
+            </div>
+
+        {% else %}
+            Prochainement !
+        {% endif %}
+
+        <div class="parametres">
+            <a href="{{ path ('app_home') }}">
+                <img class="Bouton" src="{{ asset('img/house-solid.svg') }}" title="Retour à la page d'accueil" alt="Logo Maison">
+            </a>
+        </div>
+
+    </section>
+
+
+</div>
+{% endblock %}

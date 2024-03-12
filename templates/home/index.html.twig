@@ -45,7 +45,10 @@
     {% if is_granted('ROLE_ADMIN') %}
     <div class="parametres">
         <a href="{{ path('new_youtube') }}">
-            <img src="{{ asset('img/gear-solid.svg') }}" class="Bouton" alt="Logo Engrenage" title="Gérer les Vlogs">
+            <img src="{{ asset('img/download-solid.svg') }}" class="Bouton" alt="Logo Télécharger" title="Ajouter des Vlogs">
+        </a>
+        <a href="{{ path('list_youtube') }}">
+            <img src="{{ asset('img/gear-solid.svg') }}" class="Bouton" alt="Logo Engrenage" title="Afficher la liste des Vlogs">
         </a>
     </div>
     {% endif %}

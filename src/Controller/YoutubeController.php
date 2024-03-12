@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Youtube;
 use App\Form\YoutubeType;
 use App\Service\FileUploader;
+use App\Repository\YoutubeRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -51,6 +52,18 @@ class YoutubeController extends AbstractController
 
         return $this->render('youtube/new.html.twig', [
             'form' => $form->createView()
+        ]);
+    }
+
+    #[Route('/youtube/list', name: 'list_youtube')]
+    public function list(YoutubeRepository $youtubeRepository): Response
+    {
+        if (!$this->isGranted('ROLE_ADMIN')) {                 // Permet d'empécher l'accès à cette action si ce n'est pas un admin
+            throw $this->createAccessDeniedException('Accès non autorisé');
+        }
+
+        return $this->render('youtube/list.html.twig', [
+            'youtubes' => $youtubeRepository->findAll(),
         ]);
     }
 }
